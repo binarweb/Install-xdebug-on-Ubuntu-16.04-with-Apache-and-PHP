@@ -40,6 +40,7 @@ php_value xdebug.profiler_enable 1
 ```
 
 Now, on every request Xdebug will create a `cachegrind.out.` in `/tmp` folder that can be read by Webgrind.  
+Additional information about the configuration can be found on https://xdebug.org/docs/profiler.  
 
 ## Install Webgrind
 
