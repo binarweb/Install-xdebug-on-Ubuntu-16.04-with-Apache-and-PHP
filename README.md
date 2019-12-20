@@ -31,5 +31,26 @@ service apache2 restart
 
 To test the installation, create a php file and put `phpinfo` in it. In the output there should be xdebug.  
 
+## Enabling Xdebug
+
+In .htaccess file, paste the following:
+
+```text
+php_value xdebug.profiler_enable 1
+```
+
+Now, on every request Xdebug will create a `cachegrind.out.` in `/tmp` folder that can be read by Webgrind.  
+
+## Install Webgrind
+
+```bash
+cd /var/www/html
+wget https://github.com/jokkedk/webgrind/archive/v1.6.0.zip
+unzip v1.6.0.zip
+```
+
+Now you can access Webgrind from the browser by accessing `http://<your_ip>/webgrind-1.6.0/`  
+
 ### Rerences:
 https://github.com/xdebug/xdebug  
+https://github.com/jokkedk/webgrind  
